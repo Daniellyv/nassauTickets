@@ -22,7 +22,7 @@ const conn = await mysql.createConnection({
   password: senha,
   database: nome,
   connectTimeout: 10000,
-  ...(ssl ? { ssl: { minVersion: 'TLSv1.2', rejectUnauthorized: true } } : {}),
+  ...(ssl ? { ssl } : {}),
 });
 try {
   for (const comando of comandos) await conn.query(comando);

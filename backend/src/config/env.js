@@ -1,9 +1,27 @@
+import { readFileSync } from 'node:fs';
 import 'dotenv/config';
 
 const bool = (valor, padrao) => {
   if (valor === undefined || valor === '') return padrao;
   return ['1', 'true', 'sim', 'yes'].includes(String(valor).toLowerCase());
 };
+
+/**
+ * Opções TLS do MySQL (DB_SSL=true). Bancos gerenciados costumam usar uma CA própria:
+ *  - DB_SSL_CA: certificado da CA (conteúdo PEM, aceita "\n" literal se estiver em uma linha)
+ *    ou caminho de arquivo (ex.: /etc/secrets/ca.pem via Secret Files do Render). Opção segura.
+ *  - DB_SSL_REJECT_UNAUTHORIZED=false: mantém a criptografia mas não valida o certificado.
+ */
+function opcoesSsl() {
+  if (!bool(process.env.DB_SSL, false)) return undefined;
+  const ssl = {
+    minVersion: 'TLSv1.2',
+    rejectUnauthorized: bool(process.env.DB_SSL_REJECT_UNAUTHORIZED, true),
+  };
+  const ca = process.env.DB_SSL_CA?.trim();
+  if (ca) ssl.ca = ca.includes('BEGIN CERTIFICATE') ? ca.replaceAll('\\n', '\n') : readFileSync(ca, 'utf8');
+  return ssl;
+}
 
 const producao = process.env.NODE_ENV === 'production';
 
@@ -24,7 +42,7 @@ export const env = {
     nome: process.env.DB_NAME ?? 'nassautickets',
     limiteConexoes: Number(process.env.DB_POOL ?? 10),
     // Bancos gerenciados (Aiven, TiDB, PlanetScale...) exigem TLS: DB_SSL=true
-    ssl: bool(process.env.DB_SSL, false),
+    ssl: opcoesSsl(),
   },
   // Pasta do frontend buildado (frontend/dist). Se existir, o Express a serve junto com a API
   // (um único serviço/URL, sem CORS). Em desenvolvimento o Vite cuida do frontend.
