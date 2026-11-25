@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-labelledby="t d">
+  <title id="t">nassauTickets</title>
+  <desc id="d">Logotipo: senha de papel com sinal de mais, ao lado do nome nassauTickets.</desc>
+  <rect x="0" y="0" width="96" height="96" rx="20" fill="#0f5c7a"/>
+  <path d="M20 33a6 6 0 0 1 6-6h44a6 6 0 0 1 6 6v8a8 8 0 0 0 0 16v8a6 6 0 0 1-6 6H26a6 6 0 0 1-6-6v-8a8 8 0 0 0 0-16z" fill="#ffffff"/>
+  <path d="M48 36v24M36 48h24" stroke="#0f5c7a" stroke-width="7" stroke-linecap="round"/>
+  <text x="112" y="58" font-family="'Segoe UI', system-ui, Arial, sans-serif" font-size="38" font-weight="700" fill="#14212b">nassau<tspan fill="#0f5c7a">Tickets</tspan></text>
+  <text x="113" y="80" font-family="'Segoe UI', system-ui, Arial, sans-serif" font-size="13" fill="#4a5a67">Controle de atendimento</text>
+</svg>

@@ -1,0 +1,32 @@
+# MySQL 8.0 para desenvolvimento local.
+#   cd backend
+#   docker compose up -d        # sobe o banco e cria o esquema (db/schema.sql)
+#   docker compose down         # para (os dados ficam no volume)
+#   docker compose down -v      # para e APAGA os dados
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: nassautickets-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root_dev}
+      MYSQL_DATABASE: ${DB_NAME:-nassautickets}
+      MYSQL_USER: ${DB_USER:-nassau}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-nassau_dev}
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_0900_ai_ci
+      - --default-time-zone=+00:00
+    ports:
+      - "${DB_PORT:-3306}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${DB_ROOT_PASSWORD:-root_dev}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  mysql_data:

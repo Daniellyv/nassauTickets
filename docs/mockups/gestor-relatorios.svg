@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d" font-family="'Segoe UI', Arial, sans-serif">
+  <title id="t">Mockup dos relatórios do gestor</title>
+  <desc id="d">Filtro de período, abas Resumo, Detalhado e Auditoria, indicadores e tabela por prioridade.</desc>
+  <rect width="1280" height="720" fill="#f4f7f9"/>
+  <rect width="1280" height="64" fill="#0f5c7a"/>
+  <text x="30" y="40" font-size="22" font-weight="700" fill="#fff">nassauTickets</text>
+  <text x="240" y="40" font-size="16" fill="#fff">Atendimento</text>
+  <text x="360" y="40" font-size="16" fill="#fff" text-decoration="underline">Relatórios</text>
+  <text x="460" y="40" font-size="16" fill="#fff">Usuários</text>
+  <text x="550" y="40" font-size="16" fill="#fff">Guichês</text>
+  <rect x="1110" y="16" width="140" height="34" rx="8" fill="none" stroke="#fff" stroke-width="2"/>
+  <text x="1180" y="39" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Sair</text>
+
+  <text x="40" y="112" font-size="30" font-weight="700" fill="#14212b">Relatórios</text>
+
+  <rect x="40" y="128" width="1200" height="84" rx="10" fill="#fff" stroke="#c4d0d8"/>
+  <rect x="60" y="140" width="230" height="60" rx="10" fill="none" stroke="#c4d0d8" stroke-width="2"/>
+  <text x="76" y="162" font-size="13" fill="#14212b">Período</text>
+  <text x="76" y="188" font-size="15" fill="#14212b">(●) Diário   ( ) Mensal</text>
+  <text x="320" y="160" font-size="14" font-weight="700" fill="#14212b">Data</text>
+  <rect x="320" y="166" width="180" height="34" rx="8" fill="#fff" stroke="#4a5a67" stroke-width="2"/>
+  <text x="332" y="189" font-size="15" fill="#14212b">25/03/2026</text>
+  <rect x="530" y="160" width="170" height="40" rx="10" fill="#0f5c7a"/>
+  <text x="615" y="186" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">Gerar relatório</text>
+
+  <line x1="40" y1="250" x2="1240" y2="250" stroke="#c4d0d8" stroke-width="2"/>
+  <text x="60" y="242" font-size="16" font-weight="700" fill="#0f5c7a">Resumo</text>
+  <rect x="40" y="246" width="90" height="4" fill="#0f5c7a"/>
+  <text x="170" y="242" font-size="16" font-weight="700" fill="#4a5a67">Detalhado</text>
+  <text x="290" y="242" font-size="16" font-weight="700" fill="#4a5a67">Auditoria</text>
+
+  <g font-size="13" fill="#4a5a67">
+    <rect x="40" y="272" width="280" height="76" rx="10" fill="#fff" stroke="#c4d0d8"/><text x="56" y="296">Senhas emitidas</text><text x="56" y="332" font-size="28" font-weight="800" fill="#14212b">188</text>
+    <rect x="340" y="272" width="280" height="76" rx="10" fill="#fff" stroke="#c4d0d8"/><text x="356" y="296">Senhas atendidas</text><text x="356" y="332" font-size="28" font-weight="800" fill="#14212b">178</text>
+    <rect x="640" y="272" width="280" height="76" rx="10" fill="#fff" stroke="#c4d0d8"/><text x="656" y="296">Não compareceram</text><text x="656" y="332" font-size="28" font-weight="800" fill="#14212b">9</text>
+    <rect x="940" y="272" width="300" height="76" rx="10" fill="#fff" stroke="#c4d0d8"/><text x="956" y="296">TM geral · Espera média</text><text x="956" y="332" font-size="22" font-weight="800" fill="#14212b">6min 33s · 4min 36s</text>
+  </g>
+
+  <text x="40" y="385" font-size="18" font-weight="700" fill="#14212b">Por prioridade</text>
+  <rect x="40" y="396" width="1200" height="170" rx="10" fill="#fff" stroke="#c4d0d8"/>
+  <rect x="40" y="396" width="1200" height="34" rx="10" fill="#e6eef3"/>
+  <g font-size="14" font-weight="700" fill="#14212b">
+    <text x="60" y="418">Tipo</text><text x="330" y="418">Emitidas</text><text x="450" y="418">Atendidas</text><text x="590" y="418">Não compareceram</text><text x="790" y="418">Descartadas</text><text x="960" y="418">TM</text>
+  </g>
+  <g font-size="15" fill="#14212b">
+    <text x="60" y="456">SP Prioritária</text><text x="330" y="456">43</text><text x="450" y="456">43</text><text x="590" y="456">0</text><text x="790" y="456">0</text><text x="960" y="456">14min 32s</text>
+    <text x="60" y="494">SE Retirada de Exames</text><text x="330" y="494">37</text><text x="450" y="494">33</text><text x="590" y="494">4</text><text x="790" y="494">0</text><text x="960" y="494">1min 07s</text>
+    <text x="60" y="532">SG Geral</text><text x="330" y="532">108</text><text x="450" y="532">102</text><text x="590" y="532">5</text><text x="790" y="532">1</text><text x="960" y="532">4min 56s</text>
+  </g>
+  <text x="40" y="600" font-size="14" fill="#4a5a67">Abaixo (rolagem): desempenho por atendente, atendimentos por hora (barras) e, no mensal, quantidade por dia.</text>
+  <text x="40" y="624" font-size="14" fill="#4a5a67">Abas Detalhado e Auditoria: tabelas com botão "Exportar CSV". Valores ilustrativos (simulação de um dia, semente 7).</text>
+</svg>

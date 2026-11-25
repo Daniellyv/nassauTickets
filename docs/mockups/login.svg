@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d" font-family="'Segoe UI', Arial, sans-serif">
+  <title id="t">Mockup da tela de login</title>
+  <desc id="d">Formulário de entrada com usuário, senha e botão Entrar, para atendentes e gestor.</desc>
+  <rect width="1280" height="720" fill="#f4f7f9"/>
+  <rect x="440" y="110" width="400" height="460" rx="12" fill="#fff" stroke="#c4d0d8"/>
+  <text x="480" y="170" font-size="32" font-weight="700" fill="#14212b">Entrar</text>
+  <text x="480" y="200" font-size="15" fill="#4a5a67">Acesso restrito a atendentes e ao gestor.</text>
+
+  <text x="480" y="245" font-size="16" font-weight="700" fill="#14212b">Usuário</text>
+  <rect x="480" y="255" width="320" height="44" rx="10" fill="#fff" stroke="#4a5a67" stroke-width="2"/>
+  <text x="494" y="283" font-size="16" fill="#4a5a67">atendente</text>
+
+  <text x="480" y="335" font-size="16" font-weight="700" fill="#14212b">Senha</text>
+  <rect x="480" y="345" width="320" height="44" rx="10" fill="#fff" stroke="#4a5a67" stroke-width="2"/>
+  <text x="494" y="373" font-size="20" fill="#4a5a67">••••••••••</text>
+
+  <text x="480" y="430" font-size="15" font-weight="700" fill="#a4161a">Usuário ou senha incorretos.</text>
+
+  <rect x="480" y="450" width="120" height="44" rx="10" fill="#0f5c7a"/>
+  <text x="540" y="478" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Entrar</text>
+  <text x="480" y="535" font-size="15" fill="#4a5a67" text-decoration="underline">Voltar ao início</text>
+  <text x="640" y="620" text-anchor="middle" font-size="14" fill="#4a5a67">A mensagem de erro é a mesma para usuário inexistente, senha errada e usuário inativo.</text>
+</svg>
