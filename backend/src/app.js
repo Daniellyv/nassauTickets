@@ -1,3 +1,5 @@
+import { existsSync } from 'node:fs';
+import path from 'node:path';
 import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
@@ -12,7 +14,7 @@ const LIMITES_PADRAO = {
 };
 
 /** Cria a aplicação Express a partir dos serviços (facilita testes). */
-export function criarApp(servicos, { limites = LIMITES_PADRAO } = {}) {
+export function criarApp(servicos, { limites = LIMITES_PADRAO, frontendDist = env.frontendDist } = {}) {
   const app = express();
   app.disable('x-powered-by');
   app.use(helmet());
@@ -27,6 +29,13 @@ export function criarApp(servicos, { limites = LIMITES_PADRAO } = {}) {
   app.use(express.json({ limit: '10kb' }));
 
   app.use('/api', criarRotas({ servicos, controllers: criarControllers(servicos), limites }));
+
+  // Hospedagem: serve o frontend buildado e devolve index.html nas rotas do React Router.
+  if (frontendDist && existsSync(path.join(frontendDist, 'index.html'))) {
+    const raiz = path.resolve(frontendDist);
+    app.use(express.static(raiz, { index: false, maxAge: '1h' }));
+    app.get(/^\/(?!api(\/|$)).*/, (_req, res) => res.sendFile(path.join(raiz, 'index.html')));
+  }
 
   app.use(rotaNaoEncontrada);
   app.use(tratarErros);

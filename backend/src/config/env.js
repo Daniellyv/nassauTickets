@@ -23,7 +23,12 @@ export const env = {
     senha: process.env.DB_PASSWORD ?? 'nassau_dev',
     nome: process.env.DB_NAME ?? 'nassautickets',
     limiteConexoes: Number(process.env.DB_POOL ?? 10),
+    // Bancos gerenciados (Aiven, TiDB, PlanetScale...) exigem TLS: DB_SSL=true
+    ssl: bool(process.env.DB_SSL, false),
   },
+  // Pasta do frontend buildado (frontend/dist). Se existir, o Express a serve junto com a API
+  // (um único serviço/URL, sem CORS). Em desenvolvimento o Vite cuida do frontend.
+  frontendDist: process.env.FRONTEND_DIST ?? '',
   jwtSecret: process.env.JWT_SECRET ?? 'segredo-somente-para-desenvolvimento',
   jwtExpiracao: process.env.JWT_EXPIRES_IN ?? '8h',
   corsOrigem: (process.env.CORS_ORIGIN ?? 'http://localhost:5173').split(',').map((o) => o.trim()),
