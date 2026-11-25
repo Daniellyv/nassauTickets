@@ -310,3 +310,26 @@ describe('cadastros do gestor', () => {
     assert.equal(r.status, 409);
   });
 });
+
+describe('hospedagem do frontend (FRONTEND_DIST)', () => {
+  it('serve index.html nas rotas do React Router e mantém /api intacta', async () => {
+    const { mkdtempSync, writeFileSync } = await import('node:fs');
+    const { tmpdir } = await import('node:os');
+    const pasta = mkdtempSync(`${tmpdir()}/nassau-dist-`);
+    writeFileSync(`${pasta}/index.html`, '<!doctype html><title>spa</title>');
+    const { app, servicos } = await criarContexto();
+    const { criarApp } = await import('../src/app.js');
+    const comFront = criarApp(servicos, { frontendDist: pasta });
+
+    const spa = await request(comFront).get('/gestor/relatorios');
+    assert.equal(spa.status, 200);
+    assert.match(spa.text, /<title>spa<\/title>/);
+
+    const inexistente = await request(comFront).get('/api/nao-existe');
+    assert.equal(inexistente.status, 404);
+    assert.equal(inexistente.body.erro, 'rota_nao_encontrada');
+
+    const semFront = await request(app).get('/gestor/relatorios');
+    assert.equal(semFront.status, 404);
+  });
+});
