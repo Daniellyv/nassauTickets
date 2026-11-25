@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d" font-family="'Segoe UI', Arial, sans-serif">
+  <title id="t">Mockup da tela do atendente</title>
+  <desc id="d">Cabeçalho com navegação, painel de guichê e fila à esquerda, senha em atendimento com botões de ação à direita.</desc>
+  <rect width="1280" height="720" fill="#f4f7f9"/>
+  <rect width="1280" height="64" fill="#0f5c7a"/>
+  <text x="30" y="40" font-size="22" font-weight="700" fill="#fff">nassauTickets</text>
+  <text x="240" y="40" font-size="16" fill="#fff" text-decoration="underline">Atendimento</text>
+  <text x="1090" y="40" text-anchor="end" font-size="15" fill="#fff">Atendente do Laboratório (Atendente)</text>
+  <rect x="1110" y="16" width="140" height="34" rx="8" fill="none" stroke="#fff" stroke-width="2"/>
+  <text x="1180" y="39" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Sair</text>
+
+  <text x="40" y="115" font-size="30" font-weight="700" fill="#14212b">Atendimento</text>
+
+  <rect x="40" y="140" width="380" height="400" rx="10" fill="#fff" stroke="#c4d0d8"/>
+  <text x="60" y="180" font-size="20" font-weight="700" fill="#14212b">Seu guichê</text>
+  <text x="60" y="210" font-size="15" font-weight="700" fill="#14212b">Guichê de atendimento</text>
+  <rect x="60" y="220" width="300" height="42" rx="10" fill="#fff" stroke="#4a5a67" stroke-width="2"/>
+  <text x="74" y="247" font-size="16" fill="#14212b">Guichê 2</text>
+  <text x="60" y="320" font-size="20" font-weight="700" fill="#14212b">Fila de espera</text>
+  <g font-size="18" fill="#14212b">
+    <rect x="60" y="338" width="120" height="26" rx="13" fill="#a4161a"/><text x="75" y="357" font-size="15" font-weight="700" fill="#fff">SP Prioritária</text><text x="380" y="357" text-anchor="end" font-weight="700">2</text>
+    <rect x="60" y="378" width="200" height="26" rx="13" fill="#5b2a86"/><text x="75" y="397" font-size="15" font-weight="700" fill="#fff">SE Retirada de Exames</text><text x="380" y="397" text-anchor="end" font-weight="700">1</text>
+    <rect x="60" y="418" width="100" height="26" rx="13" fill="#1b5e20"/><text x="75" y="437" font-size="15" font-weight="700" fill="#fff">SG Geral</text><text x="380" y="437" text-anchor="end" font-weight="700">7</text>
+  </g>
+
+  <rect x="450" y="140" width="790" height="400" rx="10" fill="#fff" stroke="#c4d0d8"/>
+  <text x="475" y="180" font-size="20" font-weight="700" fill="#14212b">Senha em atendimento</text>
+  <text x="475" y="270" font-size="72" font-weight="800" fill="#14212b" letter-spacing="3">SG003</text>
+  <rect x="475" y="290" width="100" height="26" rx="13" fill="#1b5e20"/><text x="490" y="309" font-size="15" font-weight="700" fill="#fff">SG Geral</text>
+  <text x="590" y="309" font-size="16" fill="#14212b">· Guichê 2</text>
+  <text x="475" y="350" font-size="16" fill="#14212b">Situação: <tspan font-weight="700">Chamada novamente</tspan> · Chamadas: 2</text>
+
+  <rect x="475" y="380" width="220" height="48" rx="10" fill="#0f5c7a"/>
+  <text x="585" y="410" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Iniciar atendimento</text>
+  <rect x="715" y="380" width="170" height="48" rx="10" fill="#a4161a"/>
+  <text x="800" y="410" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Não compareceu</text>
+
+  <rect x="475" y="470" width="740" height="44" rx="8" fill="#fff" stroke="#0b4f8a" stroke-width="1"/>
+  <rect x="475" y="470" width="6" height="44" fill="#0b4f8a"/>
+  <text x="495" y="498" font-size="15" fill="#0b4f8a">Última chamada feita no painel.</text>
+
+  <text x="40" y="580" font-size="14" fill="#4a5a67">Botões por situação — Sem senha: "Chamar próxima senha" · Chamada: "Iniciar" + "Chamar novamente" · Chamada novamente: "Iniciar" + "Não compareceu"</text>
+  <text x="40" y="602" font-size="14" fill="#4a5a67">Em atendimento: "Finalizar atendimento" + cronômetro · Mensagens de resultado anunciadas por leitor de tela (aria-live)</text>
+</svg>

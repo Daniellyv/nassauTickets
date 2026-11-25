@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d" font-family="'Segoe UI', Arial, sans-serif">
+  <title id="t">Mockup do painel de chamadas</title>
+  <desc id="d">Painel escuro para TV com a chamada atual em destaque e as quatro chamadas anteriores.</desc>
+  <rect width="1280" height="720" fill="#0b1620"/>
+  <text x="40" y="60" font-size="34" font-weight="700" fill="#fff">Chamadas</text>
+  <text x="1240" y="60" text-anchor="end" font-size="34" fill="#fff">14:08:19</text>
+
+  <rect x="40" y="90" width="1200" height="330" rx="26" fill="#12304a" stroke="#ffbf47" stroke-width="5"/>
+  <text x="640" y="145" text-anchor="middle" font-size="30" letter-spacing="4" fill="#ffd98a">CHAMANDO</text>
+  <text x="640" y="305" text-anchor="middle" font-size="170" font-weight="800" fill="#fff" letter-spacing="8">SP003</text>
+  <text x="640" y="385" text-anchor="middle" font-size="64" font-weight="700" fill="#fff">Guichê 2</text>
+
+  <text x="40" y="465" font-size="26" font-weight="700" fill="#fff">Anteriores</text>
+  <g font-size="30" fill="#fff">
+    <rect x="40" y="480" width="1200" height="44" rx="12" fill="#102233"/>
+    <text x="60" y="512"><tspan font-weight="700">SG012</tspan>   Guichê 1</text><text x="1220" y="512" text-anchor="end" font-size="20" fill="#c9d6df">14:07</text>
+    <rect x="40" y="532" width="1200" height="44" rx="12" fill="#102233"/>
+    <text x="60" y="564"><tspan font-weight="700">SE004</tspan>   Guichê 3</text><text x="1220" y="564" text-anchor="end" font-size="20" fill="#c9d6df">14:05</text>
+    <rect x="40" y="584" width="1200" height="44" rx="12" fill="#102233"/>
+    <text x="60" y="616"><tspan font-weight="700">SG011</tspan>   Guichê 2</text><text x="1220" y="616" text-anchor="end" font-size="20" fill="#c9d6df">14:02</text>
+    <rect x="40" y="636" width="1200" height="44" rx="12" fill="#102233"/>
+    <text x="60" y="668"><tspan font-weight="700">SP002</tspan>   Guichê 1</text><text x="1220" y="668" text-anchor="end" font-size="20" fill="#c9d6df">13:58</text>
+  </g>
+  <rect x="40" y="690" width="260" height="26" rx="8" fill="#0f5c7a"/>
+  <text x="170" y="709" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Ativar áudio das chamadas</text>
+  <text x="1240" y="709" text-anchor="end" font-size="15" fill="#c9d6df">Segunda chamada: o rótulo muda para "ÚLTIMA CHAMADA" · Sem conexão: faixa amarela + última lista conhecida</text>
+</svg>
