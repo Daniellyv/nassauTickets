@@ -54,7 +54,7 @@ export function criarMysqlRepository(config = env.banco) {
     connectTimeout: 5000,
     timezone: 'Z', // instantes gravados e lidos em UTC
     charset: 'utf8mb4',
-    ...(config.ssl ? { ssl: { minVersion: 'TLSv1.2', rejectUnauthorized: true } } : {}),
+    ...(config.ssl ? { ssl: config.ssl } : {}),
     // DATE volta como string 'YYYY-MM-DD' (sem conversão de fuso)
     typeCast(campo, next) {
       return campo.type === 'DATE' ? campo.string() : next();
